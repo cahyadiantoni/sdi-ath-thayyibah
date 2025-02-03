@@ -1,10 +1,11 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\FeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [FeController::class, 'Home']);
+Route::get('/tentang-kami', [FeController::class, 'About']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
