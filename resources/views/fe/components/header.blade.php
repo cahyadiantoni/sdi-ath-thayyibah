@@ -9,35 +9,29 @@
 
         <nav id="navmenu" class="navmenu">
             <ul>
-            <li><a href="index.html" class="active">Home<br></a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="courses.html">Courses</a></li>
-            <li><a href="trainers.html">Trainers</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="pricing.html">Pricing</a></li>
-            <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                <li><a href="#">Dropdown 1</a></li>
-                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                    <ul>
-                    <li><a href="#">Deep Dropdown 1</a></li>
-                    <li><a href="#">Deep Dropdown 2</a></li>
-                    <li><a href="#">Deep Dropdown 3</a></li>
-                    <li><a href="#">Deep Dropdown 4</a></li>
-                    <li><a href="#">Deep Dropdown 5</a></li>
-                    </ul>
+                <li>
+                    <a href="{{ route('home') }}" class="{{ Request::routeIs('home') ? 'active' : '' }}">Home</a>
                 </li>
-                <li><a href="#">Dropdown 2</a></li>
-                <li><a href="#">Dropdown 3</a></li>
-                <li><a href="#">Dropdown 4</a></li>
-                </ul>
-            </li>
-            <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <a href="{{ route('about') }}" class="{{ Request::routeIs('about') ? 'active' : '' }}">Tentang Kami</a>
+                </li>
+                <li>
+                    <a href="{{ route('guru') }}" class="{{ Request::routeIs('guru') ? 'active' : '' }}">Guru & Staff</a>
+                </li>
+                <li>
+                    <a href="{{ route('artikel') }}" class="{{ Request::routeIs('artikel') ? 'active' : '' }}">Artikel</a>
+                </li>
+                <li>
+                    <a href="{{ route('galeri') }}" class="{{ Request::routeIs('galeri') ? 'active' : '' }}">Galeri</a>
+                </li>
+                <li>
+                    <a href="{{ route('contact') }}" class="{{ Request::routeIs('contact') ? 'active' : '' }}">Kontak</a>
+                </li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
 
-        <a class="btn-getstarted" href="courses.html">Login</a>
+        <a class="btn-getstarted" href="{{ route('login') }}">Login</a>
 
     </div>
 </header>

@@ -1,6 +1,6 @@
 @include('fe.template.script_top') 
 
-<body class="index-page">
+<body>
     
     @include('fe.components.header')
     <main class="main">
